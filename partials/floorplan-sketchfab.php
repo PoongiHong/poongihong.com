@@ -6,7 +6,7 @@
 
 <script>
     var iframe = document.getElementById("api-frame");
-var uid = "180b726b8eef4dcb8749fedeabfb635c";
+var uid = "6b3508269ef94ec1a0326391f4ad423c";
 
 // By default, the latest version of the viewer API will be used.
 var client = new Sketchfab(iframe);
