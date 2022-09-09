@@ -16,7 +16,7 @@ loader.load(
     scene.add(gltf.scene);
   }
 );
-// testing first commit
+
 </script>
 
 
