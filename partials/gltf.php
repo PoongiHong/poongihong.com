@@ -1,4 +1,4 @@
-<?php /* Template Name: GLTF */ ?>
+<?php /* Template Name: GLTF - Converted from SketchUp */ ?>
 
 <?php get_header(); ?>
 
