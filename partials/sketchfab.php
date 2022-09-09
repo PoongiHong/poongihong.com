@@ -44,7 +44,7 @@
 </style>
 
 <div class="popup">
-    <h1> Hey Poongi! Here's your transparent popup </h1>
+    <h1> Testing deployment from git </h1>
     <div class="inner-container">
         <div id="close-popup">
             <span>X</span>
