@@ -1,4 +1,4 @@
-<?php /* Template Name: Poongi */ ?>
+<?php /* Template Name: GLTF */ ?>
 
 <?php get_header(); ?>
 
@@ -11,7 +11,7 @@
 // GLTF
 var loader = new THREE.GLTFLoader();
 loader.load(
-  "<?= get_stylesheet_directory_uri() . '/2nd%20Floor.gltf' ?>",
+  "<?= get_stylesheet_directory_uri() . '/3D+Floor+plan.gltf' ?>",
   function (gltf) {
     scene.add(gltf.scene);
   }
