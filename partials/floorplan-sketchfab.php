@@ -1,4 +1,4 @@
-<?php /* Template Name: Sketchfab */ ?>
+<?php /* Template Name: Sketchfab Floorplan */ ?>
 
 <?php get_header(); ?>
 
