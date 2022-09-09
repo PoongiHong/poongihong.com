@@ -11,7 +11,7 @@
 // GLTF
 var loader = new THREE.GLTFLoader();
 loader.load(
-  "<?= get_stylesheet_directory_uri() . '/2nd Floor.gltf' ?>",
+  "<?= get_stylesheet_directory_uri() . '/2nd%20Floor.gltf' ?>",
   function (gltf) {
     scene.add(gltf.scene);
   }
