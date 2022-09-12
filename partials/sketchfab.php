@@ -44,7 +44,7 @@
 </style>
 
 <div class="popup">
-    <h1> Testing deployment from git </h1>
+    <h1> test deployment </h1>
     <div class="inner-container">
         <div id="close-popup">
             <span>X</span>
