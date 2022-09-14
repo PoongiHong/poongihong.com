@@ -54,7 +54,8 @@ canvas {
   display: none;
   flex-direction: column;
 }
-h1 {
+.anno-title,
+.anno-content {
   color: #fff;
 }
 #api-frame {

@@ -14,18 +14,33 @@ client.init(uid, {
       // API is ready to use
       console.log("Viewer is ready");
       $ = jQuery;
+      // Close Popup
+      $(".close-popup").on("click", function () {
+        $(".popup").fadeOut("slow");
+      });
+      api.hideAnnotationTooltips(function (err) {
+        if (!err) {
+          window.console.log("Hiding annotation tooltip");
+        }
+      });
     });
     // annotation 1 gets clicked
     api.addEventListener("annotationSelect", function (index) {
       window.console.log("Selected annotation", index);
-      if (index == 0) {
+      if (index !== -1) {
         // Open Popup
         setTimeout(function () {
           $(".popup").fadeIn("slow").css("display", "flex");
         }, 1000);
-        // Close Popup
-        $(".close-popup").on("click", function () {
-          $(".popup").fadeOut("slow");
+        // Get Content
+        api.getAnnotation(index, function (err, information) {
+          if (!err) {
+            window.console.log(information);
+            var annoTitle = information.name;
+            var annoContent = information.content.raw;
+            $(".popup .anno-title").text(annoTitle);
+            $(".popup .anno-content").text(annoContent);
+          }
         });
       }
     });

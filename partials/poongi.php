@@ -3,7 +3,8 @@
 <?php get_header(); ?>
 
 <div class="popup">
-    <h1> Testing deployment from git </h1>
+    <h2 class="anno-title"> Testing deployment from git </h2>
+    <p class="anno-content"> Content </p>
     <div class="inner-container">
         <div class="close-popup">
             <span>X</span>
