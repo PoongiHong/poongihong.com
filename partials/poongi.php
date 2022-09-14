@@ -1,14 +1,17 @@
 <?php /* Template Name: Poongi */ ?>
 
 <?php get_header(); ?>
-
-<div class="popup">
-    <img src="" class="anno-img">
-    <h2 class="anno-title"> Testing deployment from git </h2>
-    <p class="anno-content"> Content </p>
-    <div class="inner-container">
-        <div class="close-popup">
-            <span>X</span>
+<div class="popup-overlay">
+    <div class="popup">
+        <img src="https://cdn.dribbble.com/users/330915/screenshots/11046870/ncs_roll_out_still_2x.gif?compress=1&resize=400x300" class="anno-img">
+        <div class="content-area">
+            <h2 class="anno-title"> Testing deployment from git </h2>
+            <p class="anno-content"> Content </p>
+        </div>
+        <div class="inner-container">
+            <div class="close-popup">
+                <span>X</span>
+            </div>
         </div>
     </div>
 </div>

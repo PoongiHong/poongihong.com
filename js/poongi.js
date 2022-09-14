@@ -39,6 +39,9 @@ client.init(uid, {
     // annotation gets clicked
     api.addEventListener("annotationSelect", function (index) {
       window.console.log("Selected annotation", index);
+      if (index == -1) {
+        $(".popup").fadeOut("slow");
+      }
       if (index !== -1) {
         // Open Popup
         setTimeout(function () {

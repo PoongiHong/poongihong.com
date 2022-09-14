@@ -52,7 +52,12 @@ canvas {
   justify-content: center;
   position: absolute;
   display: none;
-  flex-direction: column;
+  flex-direction: row;
+  padding: 20px;
+}
+.popup .content-area {
+  padding-left: 20px;
+  text-align: center;
 }
 .anno-title,
 .anno-content {
