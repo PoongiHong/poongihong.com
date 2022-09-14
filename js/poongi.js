@@ -7,6 +7,12 @@ var client = new Sketchfab(iframe);
 // Alternatively, you can request a specific version.
 // var client = new Sketchfab( '1.12.1', iframe );
 
+function closePopup() {
+  $(".close-popup").on("click", function () {
+    $(".popup").fadeOut("slow");
+  });
+}
+
 client.init(uid, {
   success: function onSuccess(api) {
     api.start();
@@ -15,9 +21,7 @@ client.init(uid, {
       console.log("Viewer is ready");
       $ = jQuery;
       // Close Popup
-      $(".close-popup").on("click", function () {
-        $(".popup").fadeOut("slow");
-      });
+      closePopup();
       api.hideAnnotationTooltips(function (err) {
         if (!err) {
           window.console.log("Hiding annotation tooltip");
@@ -26,7 +30,7 @@ client.init(uid, {
       $("#reset-camera").on("click", function () {
         api.recenterCamera(function (err) {
           if (!err) {
-            window.console.log("Camera recentered");
+            $(".popup").fadeOut("slow");
           }
         });
       });
