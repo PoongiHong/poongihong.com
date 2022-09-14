@@ -58,6 +58,27 @@ canvas {
 .anno-content {
   color: #fff;
 }
+.model-controls {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+.poongi-btn {
+  background: rgba(0, 0, 0, 70%);
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.poongi-btn:hover {
+  background: #fff;
+  color: #000;
+}
 #api-frame {
   width: 100vw;
   height: calc(100vh - 80px);

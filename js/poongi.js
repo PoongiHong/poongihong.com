@@ -23,6 +23,13 @@ client.init(uid, {
           window.console.log("Hiding annotation tooltip");
         }
       });
+      $("#reset-camera").on("click", function () {
+        api.recenterCamera(function (err) {
+          if (!err) {
+            window.console.log("Camera recentered");
+          }
+        });
+      });
     });
     // annotation 1 gets clicked
     api.addEventListener("annotationSelect", function (index) {
