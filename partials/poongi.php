@@ -3,6 +3,7 @@
 <?php get_header(); ?>
 
 <div class="popup">
+    <img src="" class="anno-img">
     <h2 class="anno-title"> Testing deployment from git </h2>
     <p class="anno-content"> Content </p>
     <div class="inner-container">

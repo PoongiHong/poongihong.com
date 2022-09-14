@@ -27,6 +27,7 @@ client.init(uid, {
           window.console.log("Hiding annotation tooltip");
         }
       });
+      // Reset Camera Function
       $("#reset-camera").on("click", function () {
         api.recenterCamera(function (err) {
           if (!err) {
@@ -34,6 +35,7 @@ client.init(uid, {
           }
         });
       });
+      // Hide Viewer Controls
     });
     // annotation 1 gets clicked
     api.addEventListener("annotationSelect", function (index) {
@@ -48,9 +50,9 @@ client.init(uid, {
           if (!err) {
             window.console.log(information);
             var annoTitle = information.name;
-            var annoContent = information.content.raw;
+            var annoContent = information.content.rendered;
             $(".popup .anno-title").text(annoTitle);
-            $(".popup .anno-content").text(annoContent);
+            $(".popup .anno-content").html(annoContent);
           }
         });
       }
