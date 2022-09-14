@@ -32,7 +32,6 @@
 	</script>
 
 	<?php wp_head(); ?>
-	
 	<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
 </head>
 <body <?php body_class(); ?>>

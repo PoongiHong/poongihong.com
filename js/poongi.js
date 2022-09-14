@@ -1,5 +1,5 @@
 var iframe = document.getElementById("api-frame");
-var uid = "8f06939822654efb94795a467f75d599";
+var uid = "6b3508269ef94ec1a0326391f4ad423c";
 
 // By default, the latest version of the viewer API will be used.
 var client = new Sketchfab(iframe);
@@ -12,20 +12,21 @@ client.init(uid, {
     api.start();
     api.addEventListener("viewerready", function () {
       // API is ready to use
-      // Insert your code here
       console.log("Viewer is ready");
+      $ = jQuery;
     });
     // annotation 1 gets clicked
     api.addEventListener("annotationSelect", function (index) {
       window.console.log("Selected annotation", index);
       if (index == 0) {
-        document.querySelector(".popup").style.display = "flex";
-        document.getElementById("close-popup").onclick = function () {
-          closePopup();
-        };
-        function closePopup() {
-          document.querySelector(".popup").style.display = "none";
-        }
+        // Open Popup
+        setTimeout(function () {
+          $(".popup").fadeIn("slow").css("display", "flex");
+        }, 1000);
+        // Close Popup
+        $(".close-popup").on("click", function () {
+          $(".popup").fadeOut("slow");
+        });
       }
     });
   },
