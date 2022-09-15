@@ -77,6 +77,11 @@ canvas {
   bottom: 0;
   width: 100%;
   padding: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  justify-content: center;
+  align-items: center;
 }
 .poongi-btn {
   background: rgba(0, 0, 0, 70%);
