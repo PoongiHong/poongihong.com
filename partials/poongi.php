@@ -30,3 +30,5 @@
 
 <!-- The Magic Happens Here -->
 <script src="<?= get_stylesheet_directory_uri() . '/js/poongi.js'?>"></script>
+
+<?php get_footer(); ?>
