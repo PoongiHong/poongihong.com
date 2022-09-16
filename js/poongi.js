@@ -71,6 +71,9 @@ client.init(uid, {
                 }
               }
             );
+            if ($(".popup").css("display") == "flex") {
+              $(".popup").fadeOut("slow");
+            }
           });
         }
       });
@@ -110,6 +113,9 @@ client.init(uid, {
             }
           }
         );
+        if ($(".popup").css("display") == "flex") {
+          $(".popup").fadeOut("slow");
+        }
       });
       // Previous Room Function
       $("#prev-anno").on("click", function () {
@@ -122,6 +128,9 @@ client.init(uid, {
             }
           }
         );
+        if ($(".popup").css("display") == "flex") {
+          $(".popup").fadeOut("slow");
+        }
       });
     });
   },
