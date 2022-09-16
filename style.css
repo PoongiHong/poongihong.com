@@ -9,8 +9,13 @@ Version: Updated for Divi 3+
 */
 
 /*------------------------------------------------*/
-/*-------------------[VARIABLES]--------------------*/
+/*-------------------[Annotations]--------------------*/
 /*------------------------------------------------*/
+#current-anno {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
 /*------------------------------------------------*/
 /*-----------------[GENERAL]------------------*/
@@ -176,6 +181,11 @@ footer {
   }
   #anno_list {
     position: sticky;
+    margin-bottom: 5px;
+  }
+  .select-room {
+    font-size: 0.85em;
+    text-align: left;
   }
 }
 

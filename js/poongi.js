@@ -94,6 +94,7 @@ client.init(uid, {
             if ($(".popup").css("display") == "flex") {
               $(".popup").fadeOut("slow");
             }
+            $("#anno_list").slideUp("slow");
           });
         }
       });
@@ -109,7 +110,7 @@ client.init(uid, {
         // Open Popup
         setTimeout(function () {
           $(".popup").fadeIn("slow").css("display", "flex");
-        }, 1000);
+        }, 1500);
       }
       // Get Content
       api.getAnnotation(index, function (err, information) {
