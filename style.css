@@ -169,9 +169,13 @@ footer {
   }
   .model-controls {
     justify-content: left;
+    overflow: visible;
   }
   .poongi-btn {
     min-width: fit-content;
+  }
+  #anno_list {
+    position: absolute;
   }
 }
 
