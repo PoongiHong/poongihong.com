@@ -23,7 +23,10 @@
 <div class="model-controls">
     <button id="reset-camera" class="poongi-btn">Reset Camera</button>
     <button id="prev-anno" class="poongi-btn">Previous Room</button>
-    <button id="current-anno" class="poongi-btn">Select Room</button>
+    <div style="position:relative">
+        <div id="anno_list"></div>
+        <button id="current-anno" class="poongi-btn">Select Room</button>
+    </div>
     <button id="next-anno" class="poongi-btn">Next Room</button>
     <button id="select-lang" class="poongi-btn">Language</button>
 </div>

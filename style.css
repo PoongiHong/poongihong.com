@@ -11,17 +11,10 @@ Version: Updated for Divi 3+
 /*------------------------------------------------*/
 /*-------------------[VARIABLES]--------------------*/
 /*------------------------------------------------*/
-:root {
-  --header-height: 80px;
-}
 
 /*------------------------------------------------*/
 /*-----------------[GENERAL]------------------*/
 /*------------------------------------------------*/
-canvas {
-  width: 100%;
-  height: 100%;
-}
 #main-footer,
 footer {
   display: none !important;
@@ -32,7 +25,7 @@ footer {
 /*------------------------------------------------*/
 #api-frame {
   width: 100%;
-  height: calc(100vh - var(--header-height));
+  height: 100vh;
 }
 
 /*------------------------------------------------*/
@@ -112,6 +105,21 @@ footer {
 .close-popup:hover {
   background: #000;
   color: #fff;
+}
+#anno_list {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 50px;
+  height: 90px;
+  overflow: scroll;
+  background: rgba(0, 0, 0, 90%);
+  padding-top: 3px;
+  border-radius: 5px;
+  display: none;
+}
+#current-anno {
+  min-width: 241px;
 }
 
 /*------------------------------------------------*/
