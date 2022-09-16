@@ -2,6 +2,14 @@
 
 <?php get_header(); ?>
 
+<!-- Template Specific CSS -->
+<style>
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+</style>
+
 <!-- Annotation Popups -->
 <div class="popup">
     <img src="https://cdn.dribbble.com/users/330915/screenshots/11046870/ncs_roll_out_still_2x.gif?compress=1&resize=400x300" class="anno-img">
