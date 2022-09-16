@@ -169,7 +169,8 @@ footer {
   }
   .model-controls {
     justify-content: left;
-    overflow: visible;
+    overflow-y: visible;
+    overflow-x: scroll;
   }
   .poongi-btn {
     min-width: fit-content;
