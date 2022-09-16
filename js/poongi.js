@@ -14,6 +14,26 @@ function closePopup() {
   });
 }
 
+// Popup img expansion
+$(".popup img").on("click", function () {
+  $(this).toggleClass("expand");
+});
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: "en" },
+    "google_translate_element"
+  );
+  $(".goog-te-gadget").prepend('<button id="close-translate">X</button>');
+  $("#close-translate").on("click", function () {
+    $("#google_translate_element").fadeOut("slow");
+  });
+}
+
+$("#select-lang").on("click", function () {
+  $("#google_translate_element").fadeIn("slow").css("display", "flex");
+});
+
 client.init(uid, {
   success: function onSuccess(api) {
     api.start();

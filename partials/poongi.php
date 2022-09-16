@@ -9,6 +9,9 @@
         overflow: hidden;
     }
 </style>
+<script type="text/javascript" 
+ src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 
 <!-- Annotation Popups -->
 <div class="popup">
@@ -23,6 +26,8 @@
         </div>
     </div>
 </div>
+
+<div id="google_translate_element"></div>
 
 <!-- 3d Model -->
 <iframe src="" id="api-frame" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
