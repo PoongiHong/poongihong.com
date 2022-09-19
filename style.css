@@ -178,6 +178,7 @@ footer {
   }
   .poongi-btn {
     min-width: fit-content;
+    font-size: 0.8em;
   }
   #anno_list {
     position: sticky;
@@ -188,7 +189,14 @@ footer {
     text-align: left;
   }
   .expand {
-    transform: scale(1.1);
+    transform: scale(1);
+    width: 100vw;
+  }
+  #main-header {
+    background: transparent;
+  }
+  #page-container {
+    padding-top: 0 !important;
   }
 }
 
