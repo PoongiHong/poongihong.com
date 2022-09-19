@@ -57,13 +57,13 @@ footer {
   padding: 20px;
 }
 .popup img {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   cursor: crosshair;
 }
 .expand {
-  width: 100vw;
   position: absolute;
   padding: 5vw;
+  transform: scale(1.9);
 }
 .popup .content-area {
   padding-left: 20px;
@@ -186,6 +186,9 @@ footer {
   .select-room {
     font-size: 0.85em;
     text-align: left;
+  }
+  .expand {
+    transform: scale(1.1);
   }
 }
 

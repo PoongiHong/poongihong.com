@@ -14,8 +14,6 @@ function closePopup() {
   });
 }
 
-// Show
-
 // Popup img expansion
 $(".popup img").on("click", function () {
   $(this).toggleClass("expand");
@@ -99,10 +97,11 @@ client.init(uid, {
                 }
               }
             );
-            if ($(".popup").css("display") == "flex") {
-              $(".popup").fadeOut("slow");
-            }
             $("#anno_list").slideUp("slow");
+            if ($(".popup img").hasClass("expand")) {
+              $(".popup img").removeClass("expand");
+            }
+            $(".popup").hide();
           });
         }
       });
@@ -161,7 +160,10 @@ client.init(uid, {
           if (index < 0) {
             api.gotoAnnotation(roomLength - 1);
           }
-          $(".popup").fadeOut("slow");
+          if ($(".popup img").hasClass("expand")) {
+            $(".popup img").removeClass("expand");
+          }
+          $(".popup").hide();
         });
       })();
 
@@ -192,7 +194,11 @@ client.init(uid, {
           if (index > roomLength - 1) {
             api.gotoAnnotation(0);
           }
-          $(".popup").fadeOut("slow");
+
+          if ($(".popup img").hasClass("expand")) {
+            $(".popup img").removeClass("expand");
+          }
+          $(".popup").hide();
         });
       })();
     }); // Viewer Ready Ends
