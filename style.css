@@ -192,6 +192,10 @@ footer {
     transform: scale(1);
     width: 100vw;
   }
+}
+
+/*-- Mobile Landscape --*/
+@media screen and (max-width: 995px) and (max-height: 700px) {
   #main-header {
     background: transparent;
   }
