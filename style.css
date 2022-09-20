@@ -202,6 +202,9 @@ footer {
   #page-container {
     padding-top: 0 !important;
   }
+  .popup {
+    height: 100vh;
+  }
 }
 
 /*------------------------------------------------*/
