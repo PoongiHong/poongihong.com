@@ -55,7 +55,6 @@ footer {
   display: none;
   flex-direction: row;
   padding: 20px;
-  z-index: 999;
 }
 .popup img {
   transition: all 0.5s ease;
@@ -199,12 +198,14 @@ footer {
 @media screen and (max-width: 995px) and (max-height: 700px) {
   #main-header {
     background: transparent;
+    z-index: 2;
   }
   #page-container {
     padding-top: 0 !important;
   }
   .popup {
     height: 100vh;
+    z-index: 3;
   }
 }
 
