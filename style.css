@@ -84,6 +84,7 @@ footer {
   justify-content: center;
   align-items: center;
   column-gap: 10px;
+  z-index: 99999999999;
 }
 .poongi-btn {
   background: rgba(0, 0, 0, 70%);
@@ -210,6 +211,9 @@ footer {
   .expand {
     transform: scale(1);
     width: 100vw;
+  }
+  #model-controls {
+    justify-content: center;
   }
 }
 
