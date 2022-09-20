@@ -173,7 +173,7 @@ footer {
     padding-top: 20px;
   }
   .model-controls {
-    justify-content: center;
+    justify-content: left;
     align-items: flex-end;
   }
   .poongi-btn {

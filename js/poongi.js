@@ -224,6 +224,9 @@ client.init(uid, {
       if ($(window).width() < 768) {
         mobileNav();
       }
+
+      var buttonOneWidth = $("#reset-camera").width();
+      $(".model-controls").scrollLeft(buttonOneWidth);
     }); // Viewer Ready Ends
   },
   error: function onError() {
