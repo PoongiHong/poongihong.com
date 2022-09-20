@@ -201,6 +201,29 @@ client.init(uid, {
           $(".popup").hide();
         });
       })();
+
+      function mobileNav() {
+        $("#prev-anno").text("<");
+        $("#next-anno").text(">");
+      }
+
+      function desktopNav() {
+        $("#prev-anno").text("Previous Room");
+        $("#next-anno").text("Next Room");
+      }
+
+      $(window).resize(function () {
+        var wW = $(this).width();
+        if (wW < 768) {
+          mobileNav();
+        } else {
+          desktopNav();
+        }
+      });
+
+      if ($(window).width() < 768) {
+        mobileNav();
+      }
     }); // Viewer Ready Ends
   },
   error: function onError() {
