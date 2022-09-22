@@ -59,6 +59,8 @@ footer {
 .popup img {
   transition: all 0.5s ease;
   cursor: crosshair;
+  max-width: 400px;
+  max-height: 300px;
 }
 .expand {
   position: absolute;
@@ -214,6 +216,13 @@ footer {
   }
   #model-controls {
     justify-content: center;
+  }
+}
+
+/*-- Desktop --*/
+@media (min-width: 1024px) {
+  .expand {
+    transform: scale(3);
   }
 }
 
