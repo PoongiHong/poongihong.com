@@ -125,10 +125,8 @@ client.init(uid, {
         api.getAnnotation(index, function (err, information) {
           if (!err) {
             //window.console.log(information);
-            var annoImg = information.image;
             var annoTitle = information.name;
             var annoContent = information.content.rendered;
-            $(".popup .anno-image").img(annoImg);
             $(".popup .anno-title").text(annoTitle);
             $(".popup .anno-content").html(annoContent);
             $("#current-anno").text(index + 1 + ": " + annoTitle);
