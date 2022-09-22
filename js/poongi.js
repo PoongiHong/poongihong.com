@@ -1,6 +1,7 @@
 $ = jQuery;
 var iframe = document.getElementById("api-frame");
-var uid = "6b3508269ef94ec1a0326391f4ad423c";
+// var uid = "6b3508269ef94ec1a0326391f4ad423c";
+var uid = "0568795816b2466c8909b8d48d7a8f0a";
 
 // By default, the latest version of the viewer API will be used.
 var client = new Sketchfab(iframe);
@@ -129,6 +130,10 @@ client.init(uid, {
             $(".popup .anno-title").text(annoTitle);
             $(".popup .anno-content").html(annoContent);
             $("#current-anno").text(index + 1 + ": " + annoTitle);
+
+            // Format the image uri
+            var formatImg = $(".popup .anno-content span").attr("data-uri");
+            $(".popup > img").attr("src", formatImg);
           }
         });
       });
