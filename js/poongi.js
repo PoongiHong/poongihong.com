@@ -18,6 +18,15 @@ function closePopup() {
 // Popup img expansion
 $(".popup img").on("click", function () {
   $(this).toggleClass("expand");
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    $("body").css({
+      "-webkit-transform": "rotate(90deg)",
+    });
+  }
 });
 
 function googleTranslateElementInit() {
