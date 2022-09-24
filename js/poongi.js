@@ -142,9 +142,9 @@ client.init(uid, {
                 if (request.readyState === 4) {
                   if (request.status === 404) {
                     console.log(request.status);
-                  } else {
-                    $(".popup > img").attr("src", formatImg);
                   }
+                } else {
+                  $(".popup > img").attr("src", formatImg);
                 }
               };
               request.open("GET", url, true);
