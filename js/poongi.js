@@ -133,7 +133,24 @@ client.init(uid, {
 
             // Format the image uri
             var formatImg = $(".popup .anno-content span").attr("data-uri");
-            $(".popup > img").attr("src", formatImg);
+
+            var url = $(".popup > img").attr("src");
+            // If Image is a 404
+            function getStatus(url) {
+              var request = new XMLHttpRequest();
+              request.onreadystatechange = function () {
+                if (request.readyState === 4) {
+                  if (request.status === 404) {
+                    console.log(request.status);
+                  } else {
+                    $(".popup > img").attr("src", formatImg);
+                  }
+                }
+              };
+              request.open("GET", url, true);
+              request.send(null);
+            }
+            getStatus();
           }
         });
       });
