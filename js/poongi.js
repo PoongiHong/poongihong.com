@@ -27,12 +27,10 @@ function screenOrientationStyle() {
     );
   }
 }
-
 // Device Orientation
 window.addEventListener("orientationchange", (event) => {
   screenOrientationStyle();
 });
-screenOrientationStyle();
 
 // Popup img expansion
 $(".popup img").on("click", function () {
@@ -240,6 +238,7 @@ client.init(uid, {
         var wW = $(this).width();
         if (wW < 768) {
           mobileNav();
+          screenOrientationStyle();
         } else {
           desktopNav();
         }
@@ -247,6 +246,7 @@ client.init(uid, {
 
       if ($(window).width() < 768) {
         mobileNav();
+        screenOrientationStyle();
       }
 
       var buttonOneWidth = $("#reset-camera").width();
