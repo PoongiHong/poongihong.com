@@ -15,18 +15,16 @@ function closePopup() {
   });
 }
 
+// Device Orientation
+window.addEventListener("orientationchange", (event) => {
+  console.log(screen.orientation.type);
+});
+
 // Popup img expansion
 $(".popup img").on("click", function () {
   $(this).toggleClass("expand");
+  screen.orientation.lock("landscape");
 });
-
-document.querySelector(".popup img").addEventListener(
-  "click",
-  function () {
-    screen.orientation.lock("landscape");
-  },
-  false
-);
 
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(

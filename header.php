@@ -20,6 +20,7 @@
 	<?php do_action( 'et_head_meta' ); ?>
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<link rel="manifest" href="<?= get_stylesheet_directory_uri(). '/manifest.json'?>">
 
 	<?php $template_directory_uri = get_template_directory_uri(); ?>
 	
