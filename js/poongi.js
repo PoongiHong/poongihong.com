@@ -17,13 +17,21 @@ function closePopup() {
 
 // Device Orientation
 window.addEventListener("orientationchange", (event) => {
-  console.log(screen.orientation.type);
+  var screenOrientation = screen.orientation.type;
+  if (screenOrientation === "landscape-primary") {
+    $("#main-header, #page-container, .model-controls, .popup").addClass(
+      "landscape"
+    );
+  } else {
+    $("#main-header, #page-container, .model-controls, .popup").removeClass(
+      "landscape"
+    );
+  }
 });
 
 // Popup img expansion
 $(".popup img").on("click", function () {
   $(this).toggleClass("expand");
-  screen.orientation.lock("landscape");
 });
 
 function googleTranslateElementInit() {

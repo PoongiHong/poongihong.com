@@ -193,33 +193,24 @@ footer {
   }
 }
 
-/*-- Mobile Landscape --*/
-@media screen and (max-width: 995px) and (max-height: 700px) {
-  #main-header {
-    background: transparent;
-    box-shadow: none;
-  }
-  #page-container {
-    padding-top: 0 !important;
-  }
-  .popup {
-    height: 100%;
-    z-index: 999999;
-  }
-  .expand {
-    transform: scale(1);
-    width: 100vw;
-  }
-  .model-controls {
-    justify-content: center;
-    z-index: 99;
-  }
+/*-- Landscape Orientation --*/
+#main-header.landscape {
+  background: transparent;
+  box-shadow: none;
 }
-
-/*------------------------------------------------*/
-/*------------------------------------------------*/
-/*------------------------------------------------*/
-/*--[ADD TUTORIAL CUSTOMIZATION BELOW THIS LINE]--*/
-/*------------------------------------------------*/
-/*------------------------------------------------*/
-/*------------------------------------------------*/
+#page-container.landscape {
+  padding-top: 0 !important;
+}
+.popup.landscape {
+  height: 100%;
+  z-index: 999999;
+  flex-direction: row;
+}
+.popup.landscape img {
+  width: initial;
+  padding: 10px;
+}
+.model-controls.landscape {
+  justify-content: center;
+  z-index: 99;
+}
