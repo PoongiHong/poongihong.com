@@ -18,16 +18,15 @@ function closePopup() {
 // Popup img expansion
 $(".popup img").on("click", function () {
   $(this).toggleClass("expand");
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  ) {
-    $("body").css({
-      "-webkit-transform": "rotate(90deg)",
-    });
-  }
 });
+
+document.querySelector(".popup img").addEventListener(
+  "click",
+  function () {
+    screen.orientation.lock("landscape");
+  },
+  false
+);
 
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
