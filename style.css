@@ -207,8 +207,9 @@ footer {
   flex-direction: row;
 }
 .popup.landscape img {
-  width: initial;
+  width: auto;
   padding: 10px;
+  height: 100%;
 }
 .model-controls.landscape {
   justify-content: center;

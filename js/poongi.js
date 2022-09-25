@@ -15,8 +15,7 @@ function closePopup() {
   });
 }
 
-// Device Orientation
-window.addEventListener("orientationchange", (event) => {
+function screenOrientationStyle() {
   var screenOrientation = screen.orientation.type;
   if (screenOrientation === "landscape-primary") {
     $("#main-header, #page-container, .model-controls, .popup").addClass(
@@ -27,7 +26,13 @@ window.addEventListener("orientationchange", (event) => {
       "landscape"
     );
   }
+}
+
+// Device Orientation
+window.addEventListener("orientationchange", (event) => {
+  screenOrientationStyle();
 });
+screenOrientationStyle();
 
 // Popup img expansion
 $(".popup img").on("click", function () {
