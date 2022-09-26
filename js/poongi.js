@@ -15,6 +15,15 @@ function closePopup() {
   });
 }
 
+function setFrameHeight() {
+  var modelControlsHeight = $(".model-controls").outerHeight();
+  var headerHeight = $("#main-header").outerHeight();
+  var iframeOffwidth = modelControlsHeight + headerHeight + "px";
+  $("#api-frame").css({
+    height: "calc(100vh - " + iframeOffwidth + ")",
+  });
+}
+
 function screenOrientationStyle() {
   var screenOrientation = screen.orientation.type;
   if (screenOrientation === "landscape-primary") {
@@ -239,6 +248,7 @@ client.init(uid, {
         if (wW < 768) {
           mobileNav();
           screenOrientationStyle();
+          // setFrameHeight();
         } else {
           desktopNav();
         }
@@ -247,6 +257,7 @@ client.init(uid, {
       if ($(window).width() < 768) {
         mobileNav();
         screenOrientationStyle();
+        // setFrameHeight();
       }
 
       var buttonOneWidth = $("#reset-camera").width();
