@@ -206,6 +206,7 @@ footer {
   height: 100%;
   z-index: 999999;
   flex-direction: row;
+  padding: 60px;
 }
 .popup.landscape img {
   width: auto;
@@ -215,4 +216,8 @@ footer {
 .model-controls.landscape {
   justify-content: center;
   z-index: 99;
+}
+.popup.landscape > .anno-img.expand {
+  height: 100vh;
+  padding-left: 0;
 }
