@@ -203,7 +203,7 @@ footer {
   padding-top: 0 !important;
 }
 .popup.landscape {
-  height: calc(100% - 60px);
+  height: 100%;
   z-index: 999999;
   flex-direction: row;
   padding: 60px;
