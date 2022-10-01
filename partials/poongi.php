@@ -42,6 +42,9 @@
     </div>
     <button id="next-anno" class="poongi-btn">Next Room</button>
     <button id="select-lang" class="poongi-btn">Language</button>
+    <button id="fullscreen" class="poongi-btn">
+        <img src="<?= get_stylesheet_directory_uri() . '/icons/fullscreen.svg' ?>" />
+    </button>
 </div>
 
 <!-- The Magic Happens Here -->

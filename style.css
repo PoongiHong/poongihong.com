@@ -221,3 +221,40 @@ footer {
   height: 100vh;
   padding-left: 0;
 }
+
+/*-- Fullscreen Button --*/
+#fullscreen img {
+  height: 100%;
+}
+#fullscreen {
+  position: absolute;
+  right: 5px;
+  border: none;
+  height: 28px;
+  border-radius: 0;
+  padding: 5px;
+  z-index: 999;
+}
+.et_menu_container #fullscreen {
+  position: relative;
+  right: -10px;
+}
+#fullscreen:hover {
+  background: rgba(0, 0, 0, 70%);
+}
+@media (max-width: 979.98px) {
+  .model-controls #fullscreen {
+    display: none;
+  }
+  .et_menu_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+@media (min-width: 980px) {
+  .et_menu_container #fullscreen {
+    display: none;
+  }
+}

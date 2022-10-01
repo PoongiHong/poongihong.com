@@ -24,6 +24,24 @@ function setFrameHeight() {
   });
 }
 
+// Full Screen Function
+var fsElem = document.getElementById("et-main-area");
+function fullScreen() {
+  if (fsElem.requestFullscreen) {
+    fsElem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    fsElem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    fsElem.msRequestFullscreen();
+  }
+}
+$("#fullscreen").on("click", () => {
+  fullScreen();
+});
+$(".et_menu_container").append(
+  '<button id="fullscreen" class="poongi-btn"><img src="https://jorgefelixcabrera.local/wp-content/themes/Divi_Child/icons/fullscreen.svg"></button>'
+);
+
 function screenOrientationStyle() {
   var screenOrientation = screen.orientation.type;
   if (screenOrientation === "landscape-primary") {
