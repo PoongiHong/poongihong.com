@@ -258,3 +258,8 @@ footer {
     display: none;
   }
 }
+
+/*-- Popup when fullscreen --*/
+.height-100vh {
+  height: 100vh;
+}

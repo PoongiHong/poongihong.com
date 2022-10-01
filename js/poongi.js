@@ -168,6 +168,11 @@ client.init(uid, {
           // Open Popup
           setTimeout(function () {
             $(".popup").fadeIn("slow").css("display", "flex");
+            if (window.innerHeight == screen.height) {
+              $(".popup").addClass("height-100vh");
+            } else {
+              $(".popup").removeClass("height-100vh");
+            }
           }, 1500);
         }
         // Get Content
