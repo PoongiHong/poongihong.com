@@ -54,7 +54,7 @@ function screenOrientationStyle() {
     $("#main-header, #page-container, .model-controls, .popup").removeClass(
       "landscape"
     );
-    document.exitFullscreen();
+    fsElem.exitFullscreen();
   }
 }
 // Device Orientation
