@@ -24,11 +24,11 @@ function setFrameHeight() {
   });
 }
 
+// Full Screen Function
 $(".et_menu_container").append(
   '<button id="fullscreen" class="poongi-btn"><img src="https://poongihong.com/wp-content/themes/Divi_Child/icons/fullscreen.svg"></button>'
 );
 
-// Full Screen Function
 var fsElem = document.getElementById("et-main-area");
 function fullScreen() {
   if (fsElem.requestFullscreen) {
@@ -43,6 +43,7 @@ $("#fullscreen").on("click", () => {
   fullScreen();
 });
 
+// Screen Orientation
 function screenOrientationStyle() {
   var screenOrientation =
     (screen.orientation || {}).type ||
