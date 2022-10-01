@@ -49,6 +49,7 @@ function screenOrientationStyle() {
     $("#main-header, #page-container, .model-controls, .popup").addClass(
       "landscape"
     );
+    fullScreen();
   } else {
     $("#main-header, #page-container, .model-controls, .popup").removeClass(
       "landscape"
