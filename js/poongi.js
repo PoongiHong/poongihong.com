@@ -44,17 +44,20 @@ $("#fullscreen").on("click", () => {
 });
 
 function screenOrientationStyle() {
-  var screenOrientation = screen.orientation.type;
+  var screenOrientation =
+    (screen.orientation || {}).type ||
+    screen.mozOrientation ||
+    screen.msOrientation;
   if (screenOrientation === "landscape-primary") {
     $("#main-header, #page-container, .model-controls, .popup").addClass(
       "landscape"
     );
-    fullScreen();
+    document.fsElem.requestFullscreen();
   } else {
     $("#main-header, #page-container, .model-controls, .popup").removeClass(
       "landscape"
     );
-    fsElem.exitFullscreen();
+    document.exitFullscreen();
   }
 }
 // Device Orientation
