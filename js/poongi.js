@@ -39,7 +39,7 @@ function fullScreen() {
     fsElem.msRequestFullscreen();
   }
 }
-$("#fullscreen").on("click", () => {
+$("#fullscreen, .fullscreen-btn").on("click", () => {
   fullScreen();
 });
 
