@@ -242,6 +242,10 @@ footer {
 #fullscreen:hover {
   background: rgba(0, 0, 0, 70%);
 }
+#et-main-area > #fullscreen:nth-child(1) {
+  top: 10px;
+  right: 10px;
+}
 @media (max-width: 979.98px) {
   .model-controls #fullscreen {
     display: none;
@@ -254,7 +258,8 @@ footer {
   }
 }
 @media (min-width: 980px) {
-  .et_menu_container #fullscreen {
+  .et_menu_container #fullscreen,
+  #et-main-area > #fullscreen:nth-child(1) {
     display: none;
   }
 }

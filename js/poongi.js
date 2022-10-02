@@ -31,16 +31,24 @@ $(".et_menu_container").append(
 
 var fsElem = document.getElementById("et-main-area");
 function fullScreen() {
-  if (fsElem.requestFullscreen) {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else {
     fsElem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
-    fsElem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    fsElem.msRequestFullscreen();
   }
 }
 $("#fullscreen, .fullscreen-btn").on("click", () => {
   fullScreen();
+});
+
+var fullscreenBtn = $("#fullscreen");
+document.addEventListener("fullscreenchange", () => {
+  if (document.fullscreenElement) {
+    $("#et-main-area").prepend(fullscreenBtn);
+  } else {
+    $("#main-header .et_menu_container").append(fullscreenBtn);
+    console.log("normal");
+  }
 });
 
 // Screen Orientation
