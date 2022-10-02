@@ -245,6 +245,7 @@ footer {
 #et-main-area > #fullscreen:nth-child(1) {
   top: 10px;
   right: 10px;
+  z-index: 99999999999;
 }
 @media (max-width: 979.98px) {
   .model-controls #fullscreen {

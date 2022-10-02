@@ -30,10 +30,15 @@ $(".et_menu_container").append(
 );
 
 var fsElem = document.getElementById("et-main-area");
+var fullscreenBtn = $("#fullscreen");
+
 function fullScreen() {
   if (document.fullscreenElement) {
     document.exitFullscreen();
+  } else if (document.webkitIsFullScreen) {
+    document.webkitExitFullscreen();
   } else {
+    fsElem.webkitRequestFullscreen();
     fsElem.requestFullscreen();
   }
 }
@@ -41,9 +46,17 @@ $("#fullscreen, .fullscreen-btn").on("click", () => {
   fullScreen();
 });
 
-var fullscreenBtn = $("#fullscreen");
 document.addEventListener("fullscreenchange", () => {
   if (document.fullscreenElement) {
+    $("#et-main-area").prepend(fullscreenBtn);
+  } else {
+    $("#main-header .et_menu_container").append(fullscreenBtn);
+    console.log("normal");
+  }
+});
+
+$(fsElem).on("webkitfullscreenchange", () => {
+  if (document.webkitIsFullScreen) {
     $("#et-main-area").prepend(fullscreenBtn);
   } else {
     $("#main-header .et_menu_container").append(fullscreenBtn);
