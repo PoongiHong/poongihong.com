@@ -294,14 +294,19 @@ client.init(uid, {
 
       $(window).resize(function () {
         var wW = $(this).width();
+        var annoWidth = $("#current-anno").width() + 30;
+
         if (wW < 768) {
           mobileNav();
           screenOrientationStyle();
           // setFrameHeight();
         } else {
           desktopNav();
+          $("#anno_list").css("width", annoWidth);
         }
       });
+
+      $(window).trigger("resize");
 
       if ($(window).width() < 768) {
         mobileNav();

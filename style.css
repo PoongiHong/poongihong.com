@@ -128,10 +128,15 @@ footer {
   bottom: 50px;
   height: 90px;
   overflow: scroll;
+  overflow-x: hidden;
   background: rgba(0, 0, 0, 90%);
   padding-top: 3px;
   border-radius: 5px;
   display: none;
+}
+#anno_list::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 #current-anno {
   min-width: 241px;
