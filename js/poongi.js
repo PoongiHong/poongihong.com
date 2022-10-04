@@ -25,9 +25,27 @@ function setFrameHeight() {
 }
 
 // Full Screen Function
-$(".et_menu_container").append(
-  '<button id="fullscreen" class="poongi-btn"><img src="https://poongihong.com/wp-content/themes/Divi_Child/icons/fullscreen.svg"></button>'
-);
+deadFunctions = () => {
+  $(".et_menu_container").append(
+    '<button id="fullscreen" class="poongi-btn"><img src="https://poongihong.com/wp-content/themes/Divi_Child/icons/fullscreen.svg"></button>'
+  );
+  document.addEventListener("fullscreenchange", () => {
+    if (document.fullscreenElement) {
+      $("#et-main-area").prepend(fullscreenBtn);
+    } else {
+      $("#main-header .et_menu_container").append(fullscreenBtn);
+      console.log("normal");
+    }
+    $(fsElem).on("webkitfullscreenchange", () => {
+      if (document.webkitIsFullScreen) {
+        $("#et-main-area").prepend(fullscreenBtn);
+      } else {
+        $("#main-header .et_menu_container").append(fullscreenBtn);
+        console.log("normal");
+      }
+    });
+  });
+};
 
 var fsElem = document.getElementById("et-main-area");
 var fullscreenBtn = $("#fullscreen");
@@ -44,24 +62,6 @@ function fullScreen() {
 }
 $("#fullscreen, .fullscreen-btn").on("click", () => {
   fullScreen();
-});
-
-document.addEventListener("fullscreenchange", () => {
-  if (document.fullscreenElement) {
-    $("#et-main-area").prepend(fullscreenBtn);
-  } else {
-    $("#main-header .et_menu_container").append(fullscreenBtn);
-    console.log("normal");
-  }
-});
-
-$(fsElem).on("webkitfullscreenchange", () => {
-  if (document.webkitIsFullScreen) {
-    $("#et-main-area").prepend(fullscreenBtn);
-  } else {
-    $("#main-header .et_menu_container").append(fullscreenBtn);
-    console.log("normal");
-  }
 });
 
 // Screen Orientation
@@ -189,11 +189,11 @@ client.init(uid, {
           // Open Popup
           setTimeout(function () {
             $(".popup").fadeIn("slow").css("display", "flex");
-            if (window.innerHeight == screen.height) {
-              $(".popup").addClass("height-100vh");
-            } else {
-              $(".popup").removeClass("height-100vh");
-            }
+            // if (window.innerHeight == screen.height) {
+            //   $(".popup").addClass("height-100vh");
+            // } else {
+            //   $(".popup").removeClass("height-100vh");
+            // }
           }, 1500);
         }
         // Get Content
