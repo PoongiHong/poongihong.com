@@ -155,9 +155,7 @@ client.init(uid, {
       });
 
       // Annotation Gets Clicked
-
       api.addEventListener("annotationSelect", function (index) {
-        //window.console.log("Selected annotation", index);
         if (index == -1) {
           $(".popup").fadeOut("slow");
           $("#anno_list").slideUp("slow");
@@ -166,26 +164,22 @@ client.init(uid, {
           // Open Popup
           setTimeout(function () {
             $(".popup").fadeIn("slow").css("display", "flex");
-            // if (window.innerHeight == screen.height) {
-            //   $(".popup").addClass("height-100vh");
-            // } else {
-            //   $(".popup").removeClass("height-100vh");
-            // }
           }, 1500);
         }
+
         // Get Content
         api.getAnnotation(index, function (err, information) {
           if (!err) {
-            //window.console.log(information);
             var annoTitle = information.name;
             var annoContent = information.content.rendered;
             $(".popup .anno-title").text(annoTitle);
             $(".popup .anno-content").html(annoContent);
             $("#current-anno").text(index + 1 + ": " + annoTitle);
-
-            // Format the image uri
-            var formatImg = $(".popup .anno-content span").attr("data-uri");
-            $(".popup > img").attr("src", formatImg);
+            // Append the html
+            console.log(annoContent);
+            var formatImg = $(".popup-inner .lazyload").data("uri");
+            console.log(formatImg);
+            $(".popup-inner > img").attr("src", formatImg);
           }
         });
       });
