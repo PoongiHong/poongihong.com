@@ -175,11 +175,17 @@ client.init(uid, {
             $(".popup .anno-title").text(annoTitle);
             $(".popup .anno-content").html(annoContent);
             $("#current-anno").text(index + 1 + ": " + annoTitle);
-            // Append the html
-            console.log(annoContent);
+            // Format Img from API
             var formatImg = $(".popup-inner .lazyload").data("uri");
-            console.log(formatImg);
-            $(".popup-inner > img").attr("src", formatImg);
+            if (formatImg === undefined) {
+              console.log("no image found");
+              $(".popup-inner > img").attr(
+                "src",
+                "/wp-content/themes/Divi_Child/placeholder.jpeg"
+              );
+            } else {
+              $(".popup-inner > img").attr("src", formatImg);
+            }
           }
         });
       });

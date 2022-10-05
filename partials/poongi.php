@@ -16,7 +16,7 @@
 <!-- Annotation Popups -->
 <div class="popup">
     <div class="popup-inner">
-        <img src="https://cdn.dribbble.com/users/330915/screenshots/11046870/ncs_roll_out_still_2x.gif?compress=1&resize=400x300" class="anno-img">
+        <img src="/wp-content/themes/Divi_Child/placeholder.jpeg" class="anno-img">
         <div class="content-area">
             <h2 class="anno-title"> Testing deployment from git </h2>
             <p class="anno-content"> Content </p>
