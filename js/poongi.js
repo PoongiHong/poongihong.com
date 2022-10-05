@@ -86,9 +86,9 @@ window.addEventListener("orientationchange", (event) => {
 });
 
 // Popup img expansion
-$(".popup img").on("click", function () {
-  $(this).toggleClass("expand");
-});
+// $(".popup img").on("click", function () {
+//   $(this).toggleClass("expand");
+// });
 
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
@@ -240,9 +240,9 @@ client.init(uid, {
           if (index < 0) {
             api.gotoAnnotation(roomLength - 1);
           }
-          if ($(".popup img").hasClass("expand")) {
-            $(".popup img").removeClass("expand");
-          }
+          // if ($(".popup img").hasClass("expand")) {
+          //   $(".popup img").removeClass("expand");
+          // }
           $(".popup").hide();
         });
       })();
